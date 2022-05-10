@@ -16,3 +16,7 @@ let sqarr = arr.map(function (v, i, oarr) {
 })
 console.log("Square of array");
 console.log(sqarr);
+
+let sarr = arr.map((v, i, oarr) => v * v);
+console.log(sarr);
+
