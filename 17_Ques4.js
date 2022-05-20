@@ -1,3 +1,5 @@
+// intersection of arrays
+
 let a1 = [10, 30, 50, 70, 90];
 let a2 = [63, 34, 50, 90, 80, 10, 60];
 let inter = a1.filter(v => a2.includes(v));
