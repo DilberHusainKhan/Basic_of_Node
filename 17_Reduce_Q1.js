@@ -14,6 +14,7 @@ let prime = arr.reduce((pv, cv, ci, oarr) => {
     } else {
         return pv;
     }
+
 }, 0);
 
 console.log(prime);
