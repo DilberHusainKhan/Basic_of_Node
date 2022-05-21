@@ -6,7 +6,7 @@ let str = "My name is Dilber Husain Khan. I am a Software Developer. I believe i
 
 
 // slpit with .
-let res = str.split(".").splice(" ");
+let res = str.split(".")
 console.log(res);
 
 // remove last " "
@@ -22,9 +22,7 @@ let res3 = res2.map(s => s.split(" "));
 console.log(res3);
 
 // reverse by using Foreach 
-res3.forEach(function (a) {
-    a.reverse();
-})
+res3.forEach(v => v.reverse());   //FOREACH IS MORE RELEAVENT.
 console.log(res3);
 
 // join with space
@@ -41,3 +39,7 @@ let final = res5.reduce(function (pv, cv, ci, oarr) {
 })
 
 console.log(final);
+
+// single line
+let finalResult = str.split(".").filter(v => v.length > 0).map(v => v.trim().split(" ").reverse().join(" ") + ".").reduce(function (pv, cv) { return pv + " " + cv });
+console.log(finalResult);
