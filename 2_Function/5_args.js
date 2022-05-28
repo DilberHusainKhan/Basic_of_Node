@@ -9,8 +9,9 @@ fn();
 fn("Hello", "Hii", "bye");
 
 // Argument 
-function fn1() {
+function fn1(param1, param2) {
     console.log("Argument", arguments);
+    console.log(param1, param2);
 }
 // 
 fn1("Hello", "Hii");
