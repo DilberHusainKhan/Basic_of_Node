@@ -1,12 +1,39 @@
+// var
+// function outer() {
+//     var arr = [];
+//     for (var i = 0; i < 3; i++) {
+//         arr.push(function () {
+//             console.log(i);
+//         })
+//     }
+//     return arr;
+// }
+// solution
 function outer() {
     var arr = [];
-    for (let i = 0; i < 3; i++) {
-        arr.push(function () {
-            console.log(i);
-        })
+    for (var i = 0; i < 3; i++) {
+        function outer1() {
+            var j = i;
+            return function () {
+                console.log(j);
+            }
+        }
+        arr.push(outer1());
     }
     return arr;
 }
+
+
+// let 
+// function outer() {
+//     var arr = [];
+//     for (let i = 0; i < 3; i++) {
+//         arr.push(function () {
+//             console.log(i);
+//         })
+//     }
+//     return arr;
+// }
 console.log("Before calling outer");
 var arr = outer();
 arr[0]();
